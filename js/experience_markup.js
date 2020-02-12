@@ -31,9 +31,8 @@ var Experience = {
             index: 0,
             children: [
                 1,  // #application-title-container
-                2,  // #preview-video-button-container
                 3,  // #go-to-next-one-button-container
-                4, // #go-to-next-one-indicator-container
+                5,
             ],
             parent: [],
             element: function(){
@@ -45,18 +44,19 @@ var Experience = {
             }
         },
         {
-            name: "application-title-container",
-            type: "container",
-            class: "title-container",
+            name: "talk",
+            type: "button-container",
+            class: "option-container",
             id: function(){
                 let self = this;
-                return self.name;
+                return ""+self.name+"-"+self.class;
             },
             index: 1,
             content: function(){
-                return "house of venus";
+                return "";
             },
             children: [
+                //2
             ],
             parent: [
                 0
@@ -70,21 +70,21 @@ var Experience = {
             }
         },
         {
-            name: "preview",
+            name: "talk",
             type: "container",
-            class: "video-button-container",
+            class: "option-title-container",
             id: function(){
                 let self = this;
                 return ""+self.name+"-"+self.class;
             },
             index: 2,
             content: function(){
-                return "";
+                return "talk";
             },
             children: [
             ],
             parent: [
-                0
+                1
             ],
             element: function(){
                 let self = this;
@@ -95,9 +95,9 @@ var Experience = {
             }
         },
         {
-            name: "go-to-next-one",
+            name: "show",
             type: "button-container",
-            class: "button-container",
+            class: "option-container",
             id: function(){
                 let self = this;
                 return ""+self.name+"-"+self.class;
@@ -108,7 +108,9 @@ var Experience = {
                 return "";
             },
             index: 3,
-            children: [],
+            children: [
+                //4
+            ],
             parent: [
                 0
             ],
@@ -121,20 +123,20 @@ var Experience = {
             }
         },
         {
-            name: "go-to-next-one",
-            type: "button-container",
-            class: "indicator-container",
+            name: "show",
+            type: "container",
+            class: "option-title-container",
             id: function(){
                 let self = this;
                 return ""+self.name+"-"+self.class;
             },
             content: function(pointer){
-                return "▼";
+                return "show";
             },
             index: 4,
             children: [],
             parent: [
-                0
+                3
             ],
             element: function(pointer){
                 let self = this;
@@ -145,9 +147,9 @@ var Experience = {
             }
         },
         {
-            name: "main-options",
-            type: "container",
-            class: "page-container",
+            name: "host",
+            type: "button-container",
+            class: "option-container",
             id: function(){
                 let self = this;
                 return ""+self.name+"-"+self.class;
@@ -157,12 +159,11 @@ var Experience = {
             },
             index: 5,
             children: [
-                6,  //#go-to-previous-zero-indicator-container
-                7,   //#go-to-previous-zero-button-container
-                8, // #market-option-button-container
-                9, //#about-option-button-container
+                //6
             ],
-            parent: [],
+            parent: [
+                0
+            ],
             element: function(){
                 let self = this;
                 let el = document.createElement("div");
@@ -172,15 +173,15 @@ var Experience = {
             }
         },
         {
-            name: "go-to-previous-zero",
+            name: "host",
             type: "button-container",
-            class: "indicator-container",
+            class: "option-title-container",
             id: function(){
                 let self = this;
                 return ""+self.name+"-"+self.class;
             },
             content: function(pointer){
-                return "▲";
+                return "host";
             },
             index: 6,
             children: [],
@@ -196,137 +197,7 @@ var Experience = {
             }
         },
         {
-            name: "go-to-previous-zero",
-            type: "button-container",
-            class: "button-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "";
-            },
-            index: 7,
-            children: [],
-            parent: [
-                5
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "market",
-            type: "button-container",
-            class: "option-button-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "";
-            },
-            index: 8,
-            children: [],
-            parent: [
-                5
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "about",
-            type: "container",
-            class: "option-button-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "";
-            },
-            index: 9,
-            children: [],
-            parent: [
-                5
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "market",
-            type: "container",
-            class: "option-button-title-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "market";
-            },
-            index: 10,
-            children: [],
-            parent: [
-                8
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "about",
-            type: "container",
-            class: "option-button-title-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "about";
-            },
-            index: 11,
-            children: [],
-            parent: [
-                9
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "market-option",
+            name: "talk",
             type: "container",
             class: "page-container",
             id: function(){
@@ -336,17 +207,13 @@ var Experience = {
             content: function(){
                 return "";
             },
-            index: 12,
+            index: 7,
             children: [
+                8,  // #application-title-container
+                10,  // #go-to-next-one-button-container
+                11, // #go-to-next-one-indicator-container
                 13,
-                14,
                 15,
-                17,
-                19
-                /*6,  //#go-to-previous-zero-indicator-container
-                7,   //#go-to-previous-zero-button-container
-                8, // #market-option-button-container
-                9, //#about-option-button-container*/
             ],
             parent: [],
             element: function(){
@@ -358,369 +225,201 @@ var Experience = {
             }
         },
         {
-            name: "go-to-previous-one",
-            type: "button-container",
-            class: "indicator-container",
+            name: "talk",
+            type: "container",
+            class: "page-title-container",
             id: function(){
                 let self = this;
                 return ""+self.name+"-"+self.class;
             },
-            content: function(pointer){
-                return "▲";
+            content: function(){
+                return "";
             },
-            index: 13,
-            children: [],
-            parent: [
-                12
+            index: 8,
+            children: [
             ],
-            element: function(pointer){
+            parent: [
+                7
+            ],
+            element: function(){
                 let self = this;
                 let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
+                el.setAttribute("id", self.id());
                 el.classList.add(self.class);
                 return el;
             }
         },
         {
-            name: "go-to-previous-one",
-            type: "button-container",
+            name: "talk",
+            type: "container",
+            class: "page-title-line-0-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "talk";
+            },
+            index: 9,
+            children: [
+            ],
+            parent: [
+                8
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "talk",
+            type: "container",
+            class: "page-title-line-1-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "about";
+            },
+            index: 10,
+            children: [
+            ],
+            parent: [
+                8
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "topic-sentence",
+            type: "container",
+            class: "container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "";
+            },
+            index: 11,
+            children: [
+            ],
+            parent: [
+                7
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "topic-sentence",
+            type: "container",
+            class: "content-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "topic sentence or news item will display here";
+            },
+            index: 12,
+            children: [
+            ],
+            parent: [
+                11
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "timer-button-0",
+            type: "container",
             class: "button-container",
             id: function(){
                 let self = this;
                 return ""+self.name+"-"+self.class;
             },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
+            content: function(){
                 return "";
             },
-            index: 14,
-            children: [],
-            parent: [
-                12
+            index: 13,
+            children: [
             ],
-            element: function(pointer){
+            parent: [
+                7
+            ],
+            element: function(){
                 let self = this;
                 let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
+                el.setAttribute("id", self.id());
                 el.classList.add(self.class);
                 return el;
             }
         },
         {
-            name: "tsh",
-            type: "button-container",
-            class: "venture-option-container",
+            name: "timer-button-0",
+            type: "container",
+            class: "button-content-container",
             id: function(){
                 let self = this;
                 return ""+self.name+"-"+self.class;
             },
-            content: function(pointer){
+            content: function(){
+                return "60";
+            },
+            index: 14,
+            children: [
+            ],
+            parent: [
+                13
+            ],
+            element: function(){
                 let self = this;
-                //console.log(pointer);
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "talk",
+            type: "container",
+            class: "user-video-stream-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
                 return "";
             },
             index: 15,
             children: [
-                /*16*/
             ],
             parent: [
-                12
+                7
             ],
-            element: function(pointer){
+            element: function(){
                 let self = this;
                 let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "tsh",
-            type: "container",
-            class: "venture-option-title-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "talk.show.host";
-            },
-            index: 16,
-            children: [],
-            parent: [
-                15
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "foodid",
-            type: "button-container",
-            class: "venture-option-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "";
-            },
-            index: 17,
-            children: [
-                /*18*/
-            ],
-            parent: [
-                12
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "foodid",
-            type: "container",
-            class: "venture-option-title-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "foodid";
-            },
-            index: 18,
-            children: [],
-            parent: [
-                17
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "afs",
-            type: "button-container",
-            class: "venture-option-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "";
-            },
-            index: 19,
-            children: [
-                /*20*/
-            ],
-            parent: [
-                12
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "afs",
-            type: "container",
-            class: "venture-option-title-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "anne's flower shop";
-            },
-            index: 20,
-            children: [],
-            parent: [
-                19
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "tsh",
-            type: "container",
-            class: "description-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "talk.show.host description text goes here";
-            },
-            index: 21,
-            children: [],
-            parent: [
-                15
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "tsh",
-            type: " button-container",
-            class: "view-site-button-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "view site";
-            },
-            index: 22,
-            children: [],
-            parent: [
-                15
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "foodid",
-            type: "container",
-            class: "description-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "foodid description text goes here";
-            },
-            index: 23,
-            children: [],
-            parent: [
-                17
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "foodid",
-            type: " button-container",
-            class: "view-site-button-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "view site";
-            },
-            index: 24,
-            children: [],
-            parent: [
-                17
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "afs",
-            type: "container",
-            class: "description-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "anne's flower shop description text goes here";
-            },
-            index: 25,
-            children: [],
-            parent: [
-                19
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
-                el.classList.add(self.class);
-                return el;
-            }
-        },
-        {
-            name: "afs",
-            type: " button-container",
-            class: "view-site-button-container",
-            id: function(){
-                let self = this;
-                return ""+self.name+"-"+self.class;
-            },
-            content: function(pointer){
-                let self = this;
-                //console.log(pointer);
-                return "view site";
-            },
-            index: 26,
-            children: [],
-            parent: [
-                19
-            ],
-            element: function(pointer){
-                let self = this;
-                let el = document.createElement("div");
-                el.setAttribute("id", self.id(pointer));
+                el.setAttribute("id", self.id());
                 el.classList.add(self.class);
                 return el;
             }

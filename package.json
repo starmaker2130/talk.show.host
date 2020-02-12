@@ -3,12 +3,12 @@
   "version": "0.0.2",
   "private": true,
   "dependencies": {
-    "ejs": "latest",
     "aws-sdk": "latest",
-    "express": "latest",
-    "body-parser": "latest",
-    "which-browser": "latest",
-    "socket.io": "latest"
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0",
+    "which-browser": "^0.5.1"
   },
   "scripts": {
     "start": "node single-aws-cluster.js"

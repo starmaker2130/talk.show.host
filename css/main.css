@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,600i,700,900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+#main-app-container{
+    width: 100%;
+    height: 100%;
+}
+
+.page-container{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: inline-block;
+    color: white;
+    position: relative;
+    font-size: 0;
+}
+
+.option-container{
+    width: 100%;
+    height: 33%;
+    min-height: 200px;
+}
+
+.option-title-container{
+    font-family: "Titillium Web", sans-serif;
+    width: 100%;
+    text-align: center;
+    line-height: 200px;
+    font-size: 42px;
+    height: auto;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.page-title-container{
+    font-family: "Titillium Web", sans-serif;
+    width: 60%;
+    height: 125px;
+    line-height: 75px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    z-index: 50;
+    margin: 0 auto;
+    border: 2px white solid;
+    background-color: white;
+}
+
+.button-content-container{
+    line-height: 75px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    font-family: "Titillium Web", sans-serif;
+}
+
+.button-container{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    margin-left: -37px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px white solid;
+}
+
+.page-title-line-0-container{
+    font-size: 42px;
+    line-height: inherit;
+    text-transform: uppercase;
+}
+/*  */
+
+#home-page-container{
+    background-color: yellow;
+    color: black;
+}
+
+#talk-option-container{
+    
+}
+    
+#talk-option-title-container{
+    
+}
+    
+#show-option-container{
+    
+}
+
+#show-option-title-contsiner{
+    
+}
+
+#host-option-container{
+    
+}
+
+#host-option-title-container{
+    
+}
+
+/*  */
+
+#talk-page-container{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+#talk-page-title-container{
+    color: black;
+}
+
+#talk-page-title-line-0-container{
+    
+}
+
+#talk-page-title-line-1-container{
+    font-size: 24px;
+    line-height: 50px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#topic-sentence-container{
+    width: 80%;
+    height: 300px;
+    border-radius: 10px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    z-index: 0;
+    border: 1px white solid;
+    box-shadow: 5px 5px 5px white;
+    color: white;
+}
+
+#topic-sentence-content-container{
+    width: 80%;
+    line-height: 50px;
+    margin: 15% auto 0 auto;
+    font-size: 24px;
+    font-family: "Titillium Web", sans-serif;
+}
+
+#timer-button-0-button-container{
+}
+
+#timer-button-0-button-content-container{
+
+}
+
+#talk-user-video-stream-container{
+    z-index: -2;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*  */
+
+#show-page-container{
+    
+}
+
+#show-page-title-container{
+    
+}
+
+#show-page-title-line-0-container{
+    
+}
+
+#timer-button-1-container{
+    
+}
+
+#timer-button-1-content{
+    
+}
+
+#show-user-video-stream-container{
+    
+}
+
+/*  */
+
+#host-page-container{
+    
+}
+
+#host-page-title-container{
+    
+}
+
+#host-page-title-line-0-container{
+    
+}
+
+#timer-button-2-container{
+    
+}
+
+#timer-button-2-content{
+     
+}
+
+#collection-item-0-container{
+    
+}
+
+#collection-item-1-container{
+    
+}
+
+#collection-item-2-container{
+    
+}
+
+#collection-item-3-container{
+    
+}
+
+#collection-item-4-container{
+    
+}
+
+/*  */
+
+#ghost-page-container{
+    
+}
+
+#user-stream-preview-container{
+    
+}
+
+#host-0-stream-preview-container{
+    
+}
+
+#host-1-stream-preview-container{
+    
+}
+
+#host-2-stream-preview-container{
+    
+}
+
+#host-3-stream-preview-container{
+    
+}
+
+#host-4-stream-preview-container{
+    
+}
+
+#toggle-user-webcam-button-container{
+    
+}
+
+#toggle-user-microphone-button-container{
+    
+}
+
+#toggle-user-audiomute-button-container{
+    
+}
+
+#toggle-host-0-webcam-button-container{
+    
+}
+
+#toggle-host-0-microphone-button-container{
+    
+}
+
+#toggle-host-0-audiomute-button-container{
+    
+}
+
+#toggle-host-1-webcam-button-container{
+    
+}
+
+#toggle-host-1-microphone-button-container{
+    
+}
+
+#toggle-host-1-audiomute-button-container{
+    
+}
+
+#toggle-host-2-webcam-button-container{
+    
+}
+
+#toggle-host-2-microphone-button-container{
+    
+}
+
+#toggle-host-2-audiomute-button-container{
+    
+}
+
+#toggle-host-3-webcam-button-container{
+    
+}
+
+#toggle-host-3-microphone-button-container{
+    
+}
+
+#toggle-host-3-audiomute-button-container{
+    
+}
+
+#toggle-host-4-webcam-button-container{
+    
+}
+
+#toggle-host-4-microphone-button-container{
+    
+}
+
+#toggle-host-4-audiomute-button-container{
+    
+}
+
+#toggle-user-webcam-button-container{
+    
+}
+
+#timer-button-3-container{
+    
+}
+
+#timer-button-3-content{
+    
+}
+
+#ghost-user-video-stream-container{
+    
+}

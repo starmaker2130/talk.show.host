@@ -424,6 +424,417 @@ var Experience = {
                 return el;
             }
         },
+        {
+            name: "show",
+            type: "container",
+            class: "page-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "";
+            },
+            index: 16,
+            children: [
+                17,
+                19,
+                21
+            ],
+            parent: [
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "show",
+            type: "container",
+            class: "page-title-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "";
+            },
+            index: 17,
+            children: [
+                //18
+            ],
+            parent: [
+                16
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "show",
+            type: "container",
+            class: "page-title-line-0-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "show";
+            },
+            index: 18,
+            children: [
+            ],
+            parent: [
+                17
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "timer-button-1",
+            type: "container",
+            class: "button-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "";
+            },
+            index: 19,
+            children: [
+                //20
+            ],
+            parent: [
+                16
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "timer-button-1",
+            type: "container",
+            class: "button-content-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "60";
+            },
+            index: 20,
+            children: [
+                //20
+            ],
+            parent: [
+                19
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "show",
+            type: "container",
+            class: "user-video-stream-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "";
+            },
+            index: 21,
+            children: [
+            ],
+            parent: [
+                16
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "host",
+            type: "container",
+            class: "page-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "";
+            },
+            index: 22,
+            children: [
+                23,
+                25,
+                27,
+                28,
+                29,
+                30,
+                31
+            ],
+            parent: [
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "host",
+            type: "container",
+            class: "page-title-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "";
+            },
+            index: 23,
+            children: [
+            ],
+            parent: [
+                22
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "host",
+            type: "container",
+            class: "page-title-line-0-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "host";
+            },
+            index: 24,
+            children: [
+            ],
+            parent: [
+                23
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "timer-button-2",
+            type: "container",
+            class: "button-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "";
+            },
+            index: 25,
+            children: [
+            ],
+            parent: [
+                22
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "timer-button-2",
+            type: "container",
+            class: "button-content-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "60";
+            },
+            index: 26,
+            children: [
+            ],
+            parent: [
+                25
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "collection-item-0",
+            type: "container",
+            class: "item-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "0";
+            },
+            index: 27,
+            children: [
+            ],
+            parent: [
+                22
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "collection-item-1",
+            type: "container",
+            class: "item-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "1";
+            },
+            index: 28,
+            children: [
+            ],
+            parent: [
+                22
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "collection-item-2",
+            type: "container",
+            class: "item-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "2";
+            },
+            index: 29,
+            children: [
+            ],
+            parent: [
+                22
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "collection-item-3",
+            type: "container",
+            class: "item-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "3";
+            },
+            index: 30,
+            children: [
+            ],
+            parent: [
+                22
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
+        {
+            name: "collection-item-4",
+            type: "container",
+            class: "item-container",
+            id: function(){
+                let self = this;
+                return ""+self.name+"-"+self.class;
+            },
+            content: function(){
+                return "4";
+            },
+            index: 31,
+            children: [
+            ],
+            parent: [
+                22
+            ],
+            element: function(){
+                let self = this;
+                let el = document.createElement("div");
+                el.setAttribute("id", self.id());
+                el.classList.add(self.class);
+                return el;
+            }
+        },
     ],
     subjectobject: [],
     effector: [
